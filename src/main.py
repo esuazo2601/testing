@@ -1,5 +1,10 @@
 import sys
 import datetime
-hora_actual = datetime.datetime.now().hour
-def ohce(mensaje):
-    return f'{mensaje} {sys.argv[1]}!' 
+
+def ohce(hora_actual):
+    if hora_actual >= 6 and hora_actual <= 12:
+        return f'¡Buenos días {sys.argv[1]}!'
+    elif hora_actual > 12 and hora_actual < 20:
+        return f'¡Buenas tardes {sys.argv[1]}!'
+    else:
+        return f'¡Buenas noches {sys.argv[1]}!'
