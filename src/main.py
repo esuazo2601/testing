@@ -1,2 +1,4 @@
+import sys
+
 def ohce(mensaje):
-    return mensaje
+    return f'{mensaje} {sys.argv[1]}!' 
