@@ -1,3 +1,2 @@
-greetings = '¡Buenas tardes'
-def ohce():
-    return '¡Buenos dias!'
+def ohce(mensaje):
+    return mensaje
