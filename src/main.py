@@ -1,2 +1,2 @@
 def ohce():
-    return 1
+    return '¡Buenos dias!'
