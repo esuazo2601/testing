@@ -1,21 +1,25 @@
 import sys
 
 def main_input(name):
-    entrada = input()
-    if entrada == "Stop!":
-        return f"Adios {name}"
+    while(1):
+        entrada = input()
+        if entrada == "Stop!":
+            print (f"Adios {name}")
+            return 0
 
 
 def ohce(hora_actual):
     if  len(sys.argv) > 0:
+        nombre = sys.argv[1]
         if hora_actual >= 6 and hora_actual <= 12:
-            return f'¡Buenos días {sys.argv[1]}!'
+            print (f'¡Buenos días {sys.argv[1]}!')
         elif hora_actual > 12 and hora_actual < 20:
-            return f'¡Buenas tardes {sys.argv[1]}!'
+            print (f'¡Buenas tardes {sys.argv[1]}!')
         else:
-            return f'¡Buenas noches {sys.argv[1]}!'
-    
+            print (f'¡Buenas noches {sys.argv[1]}!')
 
-""" if __name__ == "__main__":
-   print (main_input("Gustavo"))
- """
+        main_input(nombre)
+      
+if __name__ == "__main__":
+   ohce(17)
+
