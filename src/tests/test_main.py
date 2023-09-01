@@ -17,12 +17,12 @@ def test_main1(name, monkeypatch):
         assert ohce(hora_actual) == f'¡Buenas noches {name}!'
 
 #Test para que acabe la ejecución al escribir Stop!
-@pytest.mark.parametrize("name",["Pedro","Esteban","Gustavo"])
+@pytest.mark.parametrize("name", ["Pedro", "Esteban", "Gustavo"])
 def test_input_function(monkeypatch, capsys, name):
     # Simula la entrada de datos por teclado
     user_input = ["Stop!"]
-    monkeypatch.setattr('builtins.input', lambda _: user_input.pop())
-    result = main_input
+    monkeypatch.setattr('builtins.input', lambda : user_input.pop(0))
+    result = main_input(name)
 
     # Captura la salida estándar
     captured = capsys.readouterr()
